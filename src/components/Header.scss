@@ -1,0 +1,52 @@
+.Header {
+  background-color: black;
+  color: white;
+  width: 50vw;
+  background: -webkit-linear-gradient(rgb(69, 69, 69), rgb(32, 32, 32));
+  background: -moz-linear-gradient(rgb(69, 69, 69), rgb(32, 32, 32));
+  background: -o-linear-gradient(rgb(69, 69, 69), rgb(32, 32, 32));
+  background: linear-gradient(rgb(69, 69, 69), rgb(32, 32, 32));
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.Header-menu {
+  display: flex;
+  text-align: start;
+  background: -webkit-linear-gradient(rgb(29, 29, 29), rgb(15, 15, 15));
+  background: -moz-linear-gradient(rgb(29, 29, 29), rgb(15, 15, 15));
+  background: -o-linear-gradient(rgb(29, 29, 29), rgb(15, 15, 15));
+  background: linear-gradient(rgb(29, 29, 29), rgb(15, 15, 15));
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  padding: 12px 0;
+  color: #f0b801;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8em;
+}
+.Departure {
+  width: 60px;
+  padding-right: 1.5vw;
+  padding-left: 3vw;
+}
+.Head-departure {
+  display: flex;
+  align-items: center;
+  height: 11vh;
+}
+
+.Head-departure h1 {
+  font-size: 1.8em;
+  color: #f0b801;
+  font-family: "Montserrat", sans-serif;
+}
+
+.Destinations {
+  width: 20vw;
+  color: #f0b801;
+}
+
+.Click {
+  margin-left: 120px;
+}

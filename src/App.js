@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
+import "./App.scss";
+import "./reset.css";
+import Homepage from "./components/Homepage";
 import ExtractApi2 from "./components/ExtractApi2";
 import axios from "axios";
-
+   
 function App() {
   const [country, setCountry] = useState("FR");
   const [webcam, setWebcam] = useState({});
@@ -21,12 +24,7 @@ function App() {
   };
 
   return (
-    <div
-      style={{
-        margin: "50px auto",
-        witdh: "50vw",
-      }}
-    >
+    <div className="App" >
       <button
         onClick={() => {
           setCountry("NZ");
@@ -42,7 +40,10 @@ function App() {
         Canada
       </button>
       <ExtractApi2 webcam={webcam} />
+         
+      <Homepage />
     </div>
+
   );
 }
 

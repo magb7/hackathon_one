@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from "react";
-import "./App.scss";
-import "./reset.css";
-import Homepage from "./components/Homepage";
-import ExtractApi2 from "./components/ExtractApi2";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+import { Link } from "react-router-dom";
 import axios from "axios";
 
-function App() {
+function Video() {
   const [country, setCountry] = useState("FR");
   const [webcam, setWebcam] = useState({});
 
   useEffect(() => {
+    getCountry();
     getCountry();
   }, [country]);
 
@@ -26,18 +24,17 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
-        <Switch>
-          <div>
-            <Route exact path="/" component={Homepage} />
-            <Route path="/Country:country">
-              <ExtractApi2 webcam={webcam} />{" "}
-            </Route>
-          </div>
-        </Switch>
-      </Router>
+      <Link to={`/Country/${country}`}>
+        <button
+          onClick={() => {
+            setCountry("");
+          }}
+        >
+          New Zealand
+        </button>
+      </Link>
     </div>
   );
 }
 
-export default App;
+export default Video;

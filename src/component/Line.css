@@ -1,0 +1,40 @@
+.Line {
+  display: flex;
+  background-color: black;
+  color: white;
+  width: 50vw;
+  text-align: start;
+  background: -webkit-linear-gradient(rgb(69, 69, 69), rgb(32, 32, 32));
+  background: -moz-linear-gradient(rgb(69, 69, 69), rgb(32, 32, 32));
+  background: -o-linear-gradient(rgb(69, 69, 69), rgb(32, 32, 32));
+  background: linear-gradient(rgb(69, 69, 69), rgb(32, 32, 32));
+
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.Time {
+  width: 8vw;
+}
+
+.Destination {
+  width: 20vw;
+  color: yellow;
+}
+
+.Gate {
+  width: 5vw;
+}
+
+.Status {
+  width: 12vw;
+}
+
+.Status {
+  width: 12vw;
+}
+
+.Button {
+  width: 5vw;
+}

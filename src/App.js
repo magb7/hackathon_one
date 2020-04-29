@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ExtractApi from "./components/ExtractApi";
+import ExtractApi2 from "./components/ExtractApi2";
 import axios from "axios";
 
 function App() {
@@ -41,7 +41,7 @@ function App() {
       >
         Canada
       </button>
-      <ExtractApi webcam={webcam} />
+      <ExtractApi2 webcam={webcam} />
     </div>
   );
 }

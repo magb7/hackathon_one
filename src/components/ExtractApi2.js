@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-export default function ExtractApi({ webcam }) {
+export default function ExtractApi2({ webcam }) {
   const [info, setInfo] = useState("");
 
   useEffect(() => {

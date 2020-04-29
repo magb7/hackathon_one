@@ -11,7 +11,7 @@ export default function ExtractApi2({ webcam }) {
   const getWebcam = () => {
     axios
       .get(
-        `https://api.windy.com/api/webcams/v2/list/webcam=${webcam}?show=webcams:image,location,player&key=q7WhxCHqIIMwge4tYv97cddN2NWHHb2p`
+        `https://api.windy.com/api/webcams/v2/list/webcam=${webcam}?show=webcams:image,location,player,url&key=q7WhxCHqIIMwge4tYv97cddN2NWHHb2p`
       )
       .then((data) => {
         const player = data.data.result.webcams[0];

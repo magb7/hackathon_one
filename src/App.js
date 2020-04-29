@@ -1,8 +1,10 @@
-
 import React, { useState, useEffect } from "react";
+import "./App.scss";
+import "./reset.css";
+import Homepage from "./components/Homepage";
 import ExtractApi2 from "./components/ExtractApi2";
 import axios from "axios";
-
+   
 function App() {
   const [country, setCountry] = useState("FR");
   const [webcam, setWebcam] = useState({});
@@ -44,6 +46,7 @@ function App() {
       </button>
       <ExtractApi2 webcam={webcam} />
     </div>
+  <Homepage />
   );
 }
 

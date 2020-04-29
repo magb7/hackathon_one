@@ -1,0 +1,40 @@
+.Line {
+  display: flex;
+  background-color: black;
+  color: white;
+  width: 50vw;
+  text-align: start;
+  background: -webkit-linear-gradient(rgb(69, 69, 69), rgb(32, 32, 32));
+  background: -moz-linear-gradient(rgb(69, 69, 69), rgb(32, 32, 32));
+  background: -o-linear-gradient(rgb(69, 69, 69), rgb(32, 32, 32));
+  background: linear-gradient(rgb(69, 69, 69), rgb(32, 32, 32));
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  padding: 8px 0;
+  font-family: "Share", cursive;
+}
+
+.Time {
+  width: 8vw;
+  text-align: center;
+}
+.Destination {
+  width: 20vw;
+  color: #f0b801;
+  text-transform: uppercase;
+}
+.Gate {
+  width: 5vw;
+}
+
+.button img {
+  width: 20px;
+  margin-left: 130px;
+  transition: 0.3s;
+}
+
+.button img:hover {
+  transform: translate(6px, -3px);
+  cursor: pointer;
+}

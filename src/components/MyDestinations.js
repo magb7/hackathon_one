@@ -1,5 +1,6 @@
 import React from "react";
 import Destination from "./Destination";
+import "./MyDestinations.scss";
 
 const listCountry = [
   {
@@ -11,66 +12,61 @@ const listCountry = [
   {
     time: "15:20",
     destination: "Portugal",
-    gate: "A20",
+    gate: "G12",
     remarks: "On Time",
   },
   {
     time: "15:40",
     destination: "France",
-    gate: "A20",
+    gate: "B14",
     remarks: "On Time",
   },
   {
     time: "16:00",
     destination: "Germany",
-    gate: "A20",
+    gate: "C21",
     remarks: "On Time",
   },
   {
     time: "16:15",
     destination: "Netherlands",
-    gate: "A20",
+    gate: "D09",
     remarks: "On Time",
   },
   {
     time: "16:30",
     destination: "Canada",
-    gate: "A20",
+    gate: "A12",
     remarks: "On Time",
   },
   {
     time: "17:00",
     destination: "Norway",
-    gate: "A20",
+    gate: "E18",
     remarks: "On Time",
   },
   {
     time: "17:20",
     destination: "Belgium",
-    gate: "A20",
+    gate: "C17",
     remarks: "On Time",
   },
   {
     time: "17:40",
     destination: "Iceland",
-    gate: "A20",
+    gate: "B22",
     remarks: "On Time",
   },
   {
     time: "18:00",
     destination: "Switzerland",
-    gate: "A20",
+    gate: "F16",
     remarks: "On Time",
   },
 ];
 
 function MyDestinations() {
-  console.log(listCountry);
-  return (
-    <div>
-      <Destination listCountry={listCountry} />
-    </div>
-  );
+  return <Destination listCountry={listCountry} />;
 }
 
 export default MyDestinations;

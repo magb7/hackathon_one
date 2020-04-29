@@ -45,8 +45,10 @@ function App() {
         Canada
       </button>
       <ExtractApi2 webcam={webcam} />
+         
+      <Homepage />
     </div>
-  <Homepage />
+
   );
 }
 

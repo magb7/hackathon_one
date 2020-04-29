@@ -65,16 +65,10 @@ const listCountry = [
 ];
 
 function MyDestinations() {
+  console.log(listCountry);
   return (
     <div>
-      {listCountry.map((item) => {
-        <Destination
-          time={item.time}
-          destination={item.destination}
-          gate={item.gate}
-          remarks={item.remarks}
-        />;
-      })}
+      <Destination listCountry={listCountry} />
     </div>
   );
 }

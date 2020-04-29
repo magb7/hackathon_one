@@ -1,14 +1,19 @@
 import React from "react";
 
-const Destination = (props) => {
-  console.log(props);
+const Destination = ({ listCountry }) => {
   return (
-    <div>
-      <p>{props.time}</p>
-      <p>{props.destination}</p>
-      <p>{props.gate}</p>
-      <p>{props.remarks}</p>
-    </div>
+    <>
+      {listCountry.map((item) => {
+        return (
+          <div>
+            <p>{item.time}</p>
+            <p>{item.destination}</p>
+            <p>{item.gate}</p>
+            <p>{item.remarks}</p>
+          </div>
+        );
+      })}
+    </>
   );
 };
 

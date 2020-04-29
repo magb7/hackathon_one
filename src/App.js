@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import ExtractApi2 from "./components/ExtractApi2";
 import axios from "axios";

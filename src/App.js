@@ -24,12 +24,7 @@ function App() {
   };
 
   return (
-    <div
-      style={{
-        margin: "50px auto",
-        witdh: "50vw",
-      }}
-    >
+    <div className="App" >
       <button
         onClick={() => {
           setCountry("NZ");

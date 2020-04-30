@@ -3,14 +3,7 @@ import "./App.scss";
 import "./reset.css";
 import Homepage from "./components/Homepage";
 import Country from "./components/Country";
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  useParams,
-} from "react-router-dom";
-import axios from "axios";
-import Destination from "./components/Destination";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   return (

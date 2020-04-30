@@ -1,9 +1,7 @@
 import "./Destination.scss";
-import Country from "./Country";
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import { Link } from "react-router-dom";
-import axios from "axios";
 
 function Destination({ listCountry }) {
   return (
@@ -25,7 +23,7 @@ function Destination({ listCountry }) {
             </div>
             <Link to={`/Country/${item.id}`}>
               <div className="button">
-                <img src="/play.png" />
+                <img src="/play.png" alt="plane" />
               </div>
             </Link>
           </div>

@@ -45,13 +45,7 @@ const listCountry = [
     gate: "A12",
     remarks: "On Time",
   },
-  {
-    ID: "GR",
-    time: "17:00",
-    destination: "France",
-    gate: "E18",
-    remarks: "On Time",
-  },
+
   {
     id: "GR",
     time: "17:20",

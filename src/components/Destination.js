@@ -1,28 +1,11 @@
 import "./Destination.scss";
+import Country from "./Country";
 import React, { useState, useEffect } from "react";
 
 import { Link } from "react-router-dom";
 import axios from "axios";
 
 function Destination({ listCountry }) {
-  const [country, setCountry] = useState("FR");
-  const [webcam, setWebcam] = useState({});
-
-  useEffect(() => {
-    getCountry();
-    getCountry();
-  }, [country]);
-
-  const getCountry = () => {
-    axios
-      .get(
-        `https://api.windy.com/api/webcams/v2/list/country=${country}?key=q7WhxCHqIIMwge4tYv97cddN2NWHHb2p`
-      )
-      .then((data) => {
-        setWebcam(data.data.result.webcams[0].id);
-      });
-  };
-
   return (
     <>
       {listCountry.map((item, index) => {
@@ -40,17 +23,11 @@ function Destination({ listCountry }) {
             <div className="Remarks">
               <p>{item.remarks}</p>
             </div>
-            <div className="button">
-              <Link to={`/Country/${country}`}>
-                <img
-                  src="play.png"
-                  alt="play"
-                  onClick={() => {
-                    setCountry("");
-                  }}
-                />
-              </Link>
-            </div>
+            <Link to={`/Country/${item.id}`}>
+              <div className="button">
+                <img src="/play.png" />
+              </div>
+            </Link>
           </div>
         );
       })}

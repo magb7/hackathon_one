@@ -1,8 +1,26 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 
-export default function ExtractApi2({ webcam }) {
+export default function Country() {
+  const [webcam, setWebcam] = useState({});
   const [info, setInfo] = useState("");
+
+  let { country } = useParams();
+
+  useEffect(() => {
+    getCountry();
+  }, [country]);
+
+  const getCountry = () => {
+    axios
+      .get(
+        `https://api.windy.com/api/webcams/v2/list/country=${country}?key=q7WhxCHqIIMwge4tYv97cddN2NWHHb2p`
+      )
+      .then((data) => {
+        setWebcam(data.data.result.webcams[0].id);
+      });
+  };
 
   useEffect(() => {
     getWebcam();
@@ -20,11 +38,7 @@ export default function ExtractApi2({ webcam }) {
   };
 
   return (
-    <div
-      style={{
-        margin: "30px auto",
-      }}
-    >
+    <div>
       {info && <iframe alt="" src={info.player.lifetime.embed} />}
       <p>
         Hello {info && info.location.city}, {info && info.location.country} !
@@ -32,3 +46,8 @@ export default function ExtractApi2({ webcam }) {
     </div>
   );
 }
+
+/*{info && <iframe alt="" src={info.player.lifetime.embed} />}
+<p>
+Hello {info && info.location.city}, {info && info.location.country} !
+</p>*/

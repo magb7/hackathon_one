@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "./Country.css";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Country() {
-  const [webcam, setWebcam] = useState({});
-  const [info, setInfo] = useState("");
+  const [webcam, setWebcam] = useState(false);
+  const [info, setInfo] = useState(false);
 
   let { country } = useParams();
 
@@ -39,15 +41,22 @@ export default function Country() {
 
   return (
     <div>
-      {info && <iframe alt="" src={info.player.lifetime.embed} />}
-      <p>
-        Hello {info && info.location.city}, {info && info.location.country} !
-      </p>
+      {info && info.player.lifetime.embed ? (
+        <div>
+          {info && <iframe alt="" src={info.player.lifetime.embed} />}
+          <p>
+            Hello {info && info.location.city}, {info && info.location.country}{" "}
+            !
+          </p>
+          <Link to={`/`}>
+            <img className="play" src="/play.png" />
+          </Link>
+        </div>
+      ) : (
+        <div>
+          <img src="/atterrissage.gif" />
+        </div>
+      )}
     </div>
   );
 }
-
-/*{info && <iframe alt="" src={info.player.lifetime.embed} />}
-<p>
-Hello {info && info.location.city}, {info && info.location.country} !
-</p>*/

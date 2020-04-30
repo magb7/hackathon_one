@@ -16,7 +16,7 @@ function Destination({ listCountry }) {
   const getCountry = () => {
     axios
       .get(
-        `https://api.windy.com/api/webcams/v2/list/country=${ListCountry.id}?key=q7WhxCHqIIMwge4tYv97cddN2NWHHb2p`
+        `https://api.windy.com/api/webcams/v2/list/country=${country}?key=q7WhxCHqIIMwge4tYv97cddN2NWHHb2p`
       )
       .then((data) => {
         setWebcam(data.data.result.webcams[0].id);
@@ -41,7 +41,7 @@ function Destination({ listCountry }) {
               <p>{item.remarks}</p>
             </div>
             <div className="button">
-              <Link to={`/Country/${ListCountry.id}`}>
+              <Link to={`/Country/${country}`}>
                 <img
                   src="play.png"
                   alt="play"

@@ -30,7 +30,7 @@ function App() {
         <Switch>
           <div>
             <Route exact path="/" component={Homepage} />
-            <Route path="/Country:country">
+            <Route path="/Country/:country">
               <ExtractApi2 webcam={webcam} />{" "}
             </Route>
           </div>

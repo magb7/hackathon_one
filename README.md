@@ -18,3 +18,8 @@ We used the [Windy Webcams API](https://api.windy.com/webcams/docs#/panel/webcam
 - Jennifer Formanger [Github](https://github.com/JenniferFromanger)
 - Julien Martos [Github](https://github.com/JulienMartos)
 - Margaux Bédu [Github](https://github.com/magb7)
+
+
+# Netlify 
+
+See the result [here](https://peaceful-ramanujan-0451ac.netlify.app/)
